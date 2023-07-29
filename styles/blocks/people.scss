@@ -1,0 +1,7 @@
+.people {
+  padding-block: 30px;
+  justify-content: center;
+  align-items: start;
+
+  @include pageGrid;
+}

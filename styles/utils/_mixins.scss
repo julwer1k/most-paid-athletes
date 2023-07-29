@@ -1,0 +1,27 @@
+@mixin hover($_property) {
+  transition: #{$_property} 1s;
+}
+
+@mixin onTablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+
+@mixin pageGrid {
+  --columns: 2;
+  display: grid;
+  gap: 40px 30px;
+  grid-template-columns: repeat(var(--columns), 200px);
+
+  @include onDesktop {
+    --columns: 4;
+  }
+}
